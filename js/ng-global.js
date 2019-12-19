@@ -1,8 +1,7 @@
-var app = angular.module('Base', ['ngCookies','ngFileUpload', 'ngRoute']);
+var app = angular.module('Engine', ['ngCookies','ngFileUpload', 'ngRoute']);
 app.controller('Global', ['$scope', '$http', '$window', '$cookies', '$rootScope',
     function($scope, $http, $window, $cookies, $rootScope) {
         $rootScope.session = {};
-
         $rootScope.alert = {"success": null, "error": null};
 
         // SEND XHR REQUST TO TARGET URL WITH METHOD AND DATA
@@ -40,19 +39,34 @@ app.controller('Global', ['$scope', '$http', '$window', '$cookies', '$rootScope'
             });
         }
 
-        var getXHR = function(target, auth, response){
+        var getXHR = function(target, auth, respond){
             var header = {"Content-Type": 'application/json; charset=utf-8'};
             if(typeof auth !== 'undefined' && auth != null) {
                 header.Authorization = 'Bearer' + $rootScope.session.token
             }
 
-            $http.get(target, {"header": header}).then(function success(){
-                if(typeof response.redirect !== 'undefined' && response.redirect != null){
-                    $window.location.href = response.redirect;
+            $http.get(target, {"headers": header}).then(function success(response) {
+                var data = response.data;
+                $rootScope.session.profile = data.data;
+
+                if(typeof respond.redirect !== 'undefined' && respond.redirect != null){
+                    $window.location.href = respond.redirect;
                 }
             }, function failed(){
 
             });
+        }
+
+        var token = $cookies.get('token');
+        if(typeof token === 'undefined' || token == null || token == ''){
+            $window.location.href = '/login-dark.html';
+        } else {
+            $rootScope.session.token = token;
+
+            $scope.initProfile = function(){
+                var target = route.api.profile + '/1';
+                getXHR(target, true, null);
+            }    
         }
     }]
 );

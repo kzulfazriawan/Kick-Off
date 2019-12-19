@@ -9,32 +9,40 @@
 		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/uikit@latest/dist/css/uikit.min.css">
 		<link rel="stylesheet" type="text/css" href="css/login-dark.css">
 	</head>
-	<body class="login uk-cover-container uk-background-secondary uk-flex uk-flex-center uk-flex-middle uk-height-viewport uk-overflow-hidden uk-light" data-uk-height-viewport>
+	<body class="login uk-cover-container uk-background-secondary uk-flex uk-flex-center uk-flex-middle uk-height-viewport uk-overflow-hidden uk-light" data-uk-height-viewport ng-app="Engine">
 		<!-- overlay -->
 		<div class="uk-position-cover uk-overlay-primary"></div>
 		<!-- /overlay -->
 		<div class="uk-position-bottom-center uk-position-small uk-visible@m uk-position-z-index">
 			<span class="uk-text-small uk-text-muted">© 2019 Company Name - <a href="https://github.com/zzseba78/Kick-Off">Created by KickOff</a> | Built with <a href="http://getuikit.com" title="Visit UIkit 3 site" target="_blank" data-uk-tooltip><span data-uk-icon="uikit"></span></a></span>
 		</div>
-		<div class="uk-width-medium uk-padding-small uk-position-z-index" uk-scrollspy="cls: uk-animation-fade">
+		<div class="uk-width-medium uk-padding-small uk-position-z-index" uk-scrollspy="cls: uk-animation-fade" ng-controller="Login">
 			
 			<div class="uk-text-center uk-margin">
 				<img src="img/login-logo.svg" alt="Logo">
 			</div>
 
+			<div class="uk-alert-success uk-text-small uk-padding-small" uk-alert ng-show="alert.success">
+				<p class="uk-padding-remove uk-margin-remove">{{ alert.success }}</p>
+			</div>
+
+			<div class="uk-alert-danger uk-text-small uk-padding-small" uk-alert ng-show="alert.error">
+				<p class="uk-padding-remove uk-margin-remove">{{ alert.error }}</p>
+			</div>
+
 			<!-- login -->
-			<form class="toggle-class" action="login-dark.html">
+			<form class="toggle-class" ng-submit="login()">
 				<fieldset class="uk-fieldset">
 					<div class="uk-margin-small">
 						<div class="uk-inline uk-width-1-1">
 							<span class="uk-form-icon uk-form-icon-flip" data-uk-icon="icon: user"></span>
-							<input class="uk-input uk-border-pill" required placeholder="Username" type="text">
+							<input class="uk-input uk-border-pill" required placeholder="Username" type="text" ng-model="auth.email">
 						</div>
 					</div>
 					<div class="uk-margin-small">
 						<div class="uk-inline uk-width-1-1">
 							<span class="uk-form-icon uk-form-icon-flip" data-uk-icon="icon: lock"></span>
-							<input class="uk-input uk-border-pill" required placeholder="Password" type="password">
+							<input class="uk-input uk-border-pill" required placeholder="Password" type="password" ng-model="auth.password">
 						</div>
 					</div>
 					<div class="uk-margin-small">
@@ -77,7 +85,9 @@
 		<script src="/bower_components/angular/angular.min.js"></script>
 		<script src="/bower_components/angular-route/angular-route.min.js"></script>
 		<script src="/bower_components/angular-cookies/angular-cookies.min.js"></script>
+		<script src="/bower_components/ng-file-upload/ng-file-upload-all.min.js"></script>
 		<script src="/env.js"></script>
 		<script src="/js/ng-global.js"></script>
+		<script src="/js/ng-login.js"></script>
 	</body>
 </html>

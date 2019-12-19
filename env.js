@@ -1,13 +1,28 @@
 var uri = {
     "root": "",
-    "api": "",
+    "api": "http://localhost:8000/api",
 }
 
 var route = {
     "api": {
-        "login": uri.api + '/login',
+        "login": uri.api + '/authentication/login',
         "users": uri.api + '/users',
         "user" : uri.api + '/user',
-        "profile": uri_api + '/user/profile'
+        "profile": uri.api + '/user/profile'
     }
+}
+
+var en = {
+    "login":{
+        "ok": "Welcome! You'll be redirecting in 3 sec",
+        "notfound": "Your authorization isn't exist"
+    },
+    "global":{
+        "NotFound": "Data Not Found"
+    }
+}
+
+var language = 'en';
+var translation = {
+    "en": en
 }
