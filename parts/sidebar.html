@@ -1,0 +1,88 @@
+<aside id="left-col" class="uk-light uk-visible@m" ng-controller="Sidebar">
+    <div class="left-logo uk-flex uk-flex-middle">
+        <img class="custom-logo" src="img/dashboard-logo.svg" alt="">
+    </div>
+    <div class="left-content-box  content-box-dark">
+        <img src="img/avatar.svg" alt="" class="uk-border-circle profile-img">
+        <h4 class="uk-text-center uk-margin-remove-vertical text-light">{{ $root.session.profile.name }}</h4>
+        
+        <div class="uk-position-relative uk-text-center uk-display-block">
+            <p class="uk-text-small uk-text-muted uk-display-block uk-text-center">{{ $root.session.profile.role.name }}</p>
+        </div>
+    </div>
+    
+    <div class="left-nav-wrap">
+        <ul class="uk-nav uk-nav-default uk-nav-parent-icon" data-uk-nav>
+            <li class="uk-nav-header">{{ $root.application.name }}</li>
+            <!-- Home -->
+            <li><a href="#"><span data-uk-icon="icon: home" class="uk-margin-small-right"></span>Dashboard</a></li>
+            <!-- Roles & Permission -->
+            <li class="uk-parent"><a href="#"><span data-uk-icon="icon: lock" class="uk-margin-small-right"></span>Roles & Permission</a>
+                <ul class="uk-nav-sub">
+                    <li><a title="Show list roles" href="">List Roles</a></li>
+                    <li><a title="Create a role for user" href="">Create A Role</a></li>
+                    <li><a title="Show list permission" href="">List Permission</a></li>
+                    <li><a title="Create a permission for roles" href="">Create A Permission</a></li>
+                </ul>
+            </li>
+            <!-- Users -->
+            <li class="uk-parent"><a href="#"><span data-uk-icon="icon: users" class="uk-margin-small-right"></span>Users</a>
+                <ul class="uk-nav-sub">
+                    <li><a title="Show list users" href="">List Users</a></li>
+                    <li><a title="Create a new user" href="">Register new User</a></li>
+                </ul>
+            </li>
+            <!-- Mitra -->
+            <li class="uk-parent"><a href="#"><span data-uk-icon="icon: thumbnails" class="uk-margin-small-right"></span>Mitra</a>
+                <ul class="uk-nav-sub">
+                    <li><a title="Show list mitra" href="">List Users</a></li>
+                    <li><a title="Create a new mitra" href="">Register new Mitra</a></li>
+                </ul>
+            </li>
+            <!-- Agents -->
+            <li class="uk-parent"><a href="#"><span data-uk-icon="icon: list" class="uk-margin-small-right"></span>Agents</a>
+                <ul class="uk-nav-sub">
+                    <li><a title="Show list agents" href="">List Agents</a></li>
+                    <li><a title="Create a new agent" href="">Register new Agent</a></li>
+                </ul>
+            </li>
+        </ul>
+        <!--
+        <div class="left-content-box uk-margin-top">
+            
+                <h5>Daily Reports</h5>
+                <div>
+                    <span class="uk-text-small">Traffic <small>(+50)</small></span>
+                    <progress class="uk-progress" value="50" max="100"></progress>
+                </div>
+                <div>
+                    <span class="uk-text-small">Income <small>(+78)</small></span>
+                    <progress class="uk-progress success" value="78" max="100"></progress>
+                </div>
+                <div>
+                    <span class="uk-text-small">Feedback <small>(-12)</small></span>
+                    <progress class="uk-progress warning" value="12" max="100"></progress>
+                </div>
+            
+        </div>
+        -->
+    </div>
+    <div class="bar-bottom">
+        <ul class="uk-subnav uk-flex uk-flex-center uk-child-width-1-5" data-uk-grid>
+            <li>
+                <a href="#" class="uk-icon-link" data-uk-icon="icon: home" title="Home" data-uk-tooltip></a>
+            </li>
+            <li>
+                <a href="#" class="uk-icon-link" data-uk-icon="icon: settings" title="Settings" data-uk-tooltip></a>
+            </li>
+            <!--
+            <li>
+                <a href="#" class="uk-icon-link" data-uk-icon="icon: social"  title="Social" data-uk-tooltip></a>
+            </li>
+            -->
+            <li>
+                <a href="#" class="uk-icon-link" data-uk-tooltip="Sign out" data-uk-icon="icon: sign-out"></a>
+            </li>
+        </ul>
+    </div>
+</aside>

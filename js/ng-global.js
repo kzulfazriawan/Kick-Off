@@ -3,6 +3,9 @@ app.controller('Global', ['$scope', '$http', '$window', '$cookies', '$rootScope'
     function($scope, $http, $window, $cookies, $rootScope) {
         $rootScope.session = {};
         $rootScope.alert = {"success": null, "error": null};
+        $rootScope.application = {
+            "name": 'My-App'
+        };
 
         // SEND XHR REQUST TO TARGET URL WITH METHOD AND DATA
         var sendXHR = function(method, target, data, auth, response){
@@ -64,8 +67,7 @@ app.controller('Global', ['$scope', '$http', '$window', '$cookies', '$rootScope'
             $rootScope.session.token = token;
 
             $scope.initProfile = function(){
-                var target = route.api.profile + '/1';
-                getXHR(target, true, null);
+                getXHR(route.api.self, true, null);
             }    
         }
     }]

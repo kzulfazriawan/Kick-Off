@@ -1,0 +1,67 @@
+<div class="uk-card uk-card-default uk-card-small uk-card-hover" ng-init="initGetAll()">
+    <div class="uk-card-header">
+        <div class="uk-grid uk-grid-small">
+            <div class="uk-width-auto"><h4>Users</h4></div>
+            <div class="uk-width-expand uk-text-right panel-icons">
+                <a href="#" class="uk-icon-link" title="Search User" data-uk-tooltip data-uk-icon="icon: search" uk-toggle="target: #modal-search"></a>
+            </div>
+        </div>
+    </div>
+    <div class="uk-card-body">
+        <ul class="uk-list uk-list-striped">
+            <li ng-repeat="item in data">
+                <div class="uk-margin-small-top uk-clearfix">
+                    <img src="img/avatar.svg" alt="" class="uk-border-cirle uk-float-left uk-margin-remove-right" style="width:60px; margin-top:5px;">
+                    <div uk-grid>
+                        <div class="uk-width-1-2@m uk-padding-small uk-padding-remove-top">
+                            <p class="uk-padding-remove uk-margin-small-bottom uk-margin-remove-top">
+                                <a href="" class="uk-button uk-button-link uk-text-bold">{{ item.name }}</a>
+                                <a href="" uk-icon="pencil"></a>
+                            </p>
+                            <span class="uk-label" ng-show="!item.mitra_or_agent_relations.mitra_or_agent.mitra_id">{{ item.mitra_or_agent_relations.mitra_or_agent.name }}</span>
+                            <span class="uk-label uk-label-danger" ng-show="item.mitra_or_agent_relations.mitra_or_agent.mitra_id">{{ item.mitra_or_agent_relations.mitra_or_agent.name }}</span>
+                        </div>
+                        <div class="uk-width-1-2@m uk-text-small uk-padding-small uk-padding-remove-top">
+                            <p class="uk-text-muted uk-padding-remove uk-margin-small-bottom uk-margin-remove-top"><span uk-icon="icon: mail" class="uk-margin-small-right"></span>{{ item.email }}</p>
+                            <p class="uk-text-muted uk-padding-remove uk-margin-small-bottom uk-margin-remove-top"><span uk-icon="icon: receiver" class="uk-margin-small-right"></span>{{ item.profile[0].phonenumber }}</p>
+                            <p class="uk-text-muted uk-padding-remove uk-margin-small-bottom uk-margin-remove-top"><span uk-icon="icon: comment" class="uk-margin-small-right"></span>{{ item.profile[0].about }}</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="uk-card-footer">
+        <p class="uk-clearfix uk-margin-remove">
+            <ul class="uk-pagination uk-float-left uk-margin-small">
+                <li><a href="#"><span uk-pagination-previous></span></a></li>
+                <li><a href="#">1</a></li>
+                <li class="uk-disabled"><span>...</span></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">6</a></li>
+                <li class="uk-active"><span>7</span></li>
+                <li><a href="#">8</a></li>
+                <li><a href="#">9</a></li>
+                <li><a href="#">10</a></li>
+                <li class="uk-disabled"><span>...</span></li>
+                <li><a href="#">20</a></li>
+                <li><a href="#"><span uk-pagination-next></span></a></li>
+            </ul>            
+            <button class="uk-button uk-button-primary uk-float-right">Create a User</button>
+        </p>
+    </div>
+</div>
+
+<!-- This is the modal -->
+<div id="modal-search" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body">
+        <h2 class="uk-modal-title">Headline</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p class="uk-text-right">
+            <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
+            <button class="uk-button uk-button-primary" type="button">Save</button>
+        </p>
+    </div>
+</div>
