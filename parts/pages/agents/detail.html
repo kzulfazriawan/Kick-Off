@@ -14,7 +14,7 @@
     </div>
     <div class="uk-card-body uk-overflow-auto">
         <div class="uk-margin uk-clearfix">
-                        <img data-src="/img/spongebob-sample.jpg" width="150" height="150" uk-img class="uk-float-left">
+            <img data-src="/img/spongebob-sample.jpg" width="150" height="150" uk-img class="uk-float-left">
             <div uk-grid>
                 <div class="uk-width-1-2">
                     <ul class="uk-list uk-list-divider">
@@ -63,43 +63,86 @@
                 </div>
             </div>
         </div>
-        <hr/>
+        <ul uk-tab uk-switcher>
+            <li class="uk-active"><a href="#">Owner & Staff</a></li>
+            <li><a href="#">Deposit</a></li>
+            <li><a href="#">Item</a></li>
+            <li class="uk-disabled"><a>Disabled</a></li>
+        </ul>
 
-        <!-- list users -->
-        <div class="uk-margin">
-            <h4 class="uk-margin-remove uk-padding-remove">Owner & Staff</h4>
-            <table class="uk-table uk-table-striped">
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Phone number</th>
-                        <th>Status</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><a href="#!/user/1" class="uk-text-primary">John Doe</a></td>
-                        <td>johndoe@mail.com</td>
-                        <td>+62811-1111-1111</td>
-                        <td>Owner</td>
-                        <td>
-                            <a href="" uk-icon="icon: trash"></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><a href="#!/user/1" class="uk-text-danger">John Doe</a></td>
-                        <td>johndoe@mail.com</td>
-                        <td>+62811-1111-1111</td>
-                        <td>Staff</td>
-                        <td>
-                            <a href="" uk-icon="icon: trash"></a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+        <ul class="uk-switcher uk-margin">
+            <li>
+                <!-- list users -->
+                <div class="uk-margin">
+                    <table class="uk-table uk-table-striped">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Phone number</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><a href="#!/user/1" class="uk-text-primary">John Doe</a></td>
+                                <td>johndoe@mail.com</td>
+                                <td>+62811-1111-1111</td>
+                                <td>Owner</td>
+                                <td>
+                                    <a href="" uk-icon="icon: trash"></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><a href="#!/user/1" class="uk-text-danger">John Doe</a></td>
+                                <td>johndoe@mail.com</td>
+                                <td>+62811-1111-1111</td>
+                                <td>Staff</td>
+                                <td>
+                                    <a href="" uk-icon="icon: trash"></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- /list users -->
+            </li>
+            <li>
+                <!-- list deposit -->
+                <div class="uk-margin">
+                    <table class="uk-table uk-table-striped">
+                        <thead>
+                            <tr>
+                                <th>Status</th>
+                                <th>Transfer Date</th>
+                                <th>Withdrawal Deposit</th>
+                                <th>Amount</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span uk-icon="icon: check"></span></td>
+                                <td><span class="uk-text-success">01, January 2020</span></td>
+                                <td><span class="uk-text-success">01, January 2020</span></td>
+                                <td><span class="uk-text-success">Rp 3,000,000</span></td>
+                                <td><p class="uk-text-meta uk-margin-remove">Lorem ipsum</p></td>
+                            </tr>
+                            <tr>
+                                <td><span uk-icon="icon: close"></span></td>
+                                <td><span class="uk-text-danger">01, January 2020</span></td>
+                                <td><span class="uk-text-danger">01, January 2020</span></td>
+                                <td><span class="uk-text-danger">Rp 3,000,000</span></td>
+                                <td><p class="uk-text-meta uk-margin-remove">Lorem ipsum</p></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- /list users -->
+            </li>
+            <li>Bazinga!</li>
+        </ul>
     </div>
 
     <div class="uk-card-footer uk-clearfix">
