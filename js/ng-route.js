@@ -45,6 +45,11 @@ app.config(function($routeProvider) {
     })
     // ============================= Agents categories
 
+    .when("/finance/cashflow", {
+        templateUrl : "/parts/pages/finance/cashflow.html",
+        controller: "Agents"
+    })
+    // ============================= Agents categories
 
     // Mitra categories =============================
     .when("/tasks", {

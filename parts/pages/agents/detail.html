@@ -66,8 +66,8 @@
         <ul uk-tab uk-switcher>
             <li class="uk-active"><a href="#">Owner & Staff</a></li>
             <li><a href="#">Deposit</a></li>
-            <li><a href="#">Item</a></li>
-            <li class="uk-disabled"><a>Disabled</a></li>
+            <li><a href="#">Commission</a></li>
+            <li><a href="#">Cash receiver</a></li>
         </ul>
 
         <ul class="uk-switcher uk-margin">
@@ -140,13 +140,225 @@
                     </table>
                 </div>
                 <!-- /list users -->
+                <hr/>
+                <div class="uk-margin-small">
+                    <a href="#" class="uk-icon-link uk-float-right" data-uk-icon="icon: plus-circle" uk-toggle="target: #modal-deposit">
+                        Add deposit
+                    </a>
+                </div>
             </li>
-            <li>Bazinga!</li>
+            <li>
+                <!-- list deposit -->
+                <div class="uk-margin">
+                    <table class="uk-table uk-table-striped uk-text-small">
+                        <thead>
+                            <tr>
+                                <th>Status</th>
+                                <th>Resi. Number</th>
+                                <th>Input date</th>
+                                <th>Shipment date</th>
+                                <th>Delivered date</th>
+                                <th>Description</th>
+                                <th>Commission</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="uk-text-success">Delivered</span></td>
+                                <td><span class="uk-text-success">0123456789</span></td>
+                                <td><span class="uk-text-success">01, January 2020</span></td>
+                                <td><span class="uk-text-success">01, January 2020</span></td>
+                                <td><span class="uk-text-success">01, January 2020</span></td>
+                                <td><p class="uk-text-meta uk-margin-remove">Lorem ipsum</p></td>
+                                <td><span class="uk-text-success">Rp 5,000</span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="uk-text-danger">Lost</span></td>
+                                <td><span class="uk-text-danger">0123456789</span></td>
+                                <td><span class="uk-text-danger">01, January 2020</span></td>
+                                <td><span class="uk-text-danger">01, January 2020</span></td>
+                                <td><span class="uk-text-danger">01, January 2020</span></td>
+                                <td><p class="uk-text-meta uk-margin-remove">Lorem ipsum</p></td>
+                                <td><span class="uk-text-danger">-</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- /list users -->
+            </li>
+            <li>
+                <!-- list users -->
+                <div class="uk-margin">
+                    <table class="uk-table uk-table-striped uk-text-small">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Npwp</th>
+                                <th>Birthdate</th>
+                                <th>Phone number</th>
+                                <th>Address</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>John Doe</td>
+                                <td>009988776655</td>
+                                <td>Jakarta, 01 Jan 2020</td>
+                                <td>+62811-1111-1111</td>
+                                <td>
+                                    <p class="uk-text-meta uk-margin-remove">
+                                        Street street mr tukul No.20, Cengkareng Jakarta barat
+                                    </p>
+                                </td>
+                                <td>
+                                    <a href="" uk-icon="icon: trash"></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>John Doe</td>
+                                <td>009988776655</td>
+                                <td>Jakarta, 01 Jan 2020</td>
+                                <td>+62811-1111-1111</td>
+                                <td>
+                                    <p class="uk-text-meta uk-margin-remove">
+                                        Street street mr tukul No.20, Cengkareng Jakarta barat
+                                    </p>
+                                </td>
+                                <td>
+                                    <a href="" uk-icon="icon: trash"></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- /list users -->
+                <hr/>
+                <div class="uk-margin-small">
+                    <a href="#" class="uk-icon-link uk-float-right" data-uk-icon="icon: plus-circle" uk-toggle="target: #modal-cash-receiver">
+                        Add cash receiver
+                    </a>
+                </div>
+            </li>
         </ul>
     </div>
 
     <div class="uk-card-footer uk-clearfix">
         <button type="button" class="uk-button uk-button-default uk-button-large">Back</button>
-        <button type="button" class="uk-button uk-button-default uk-button-large uk-float-right">Update</button>
+        <button type="button" class="uk-button uk-button-default uk-button-large uk-float-right">
+            <span uk-icon="icon: pencil"></span> Update
+        </button>
+    </div>
+</div>
+
+<!-- This is the modal -->
+<div id="modal-deposit" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body">
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+        <h3 class="uk-modal-title">Deposit</h3>
+        <hr/>
+        <form>
+            <!-- search form form -->
+            <div class="uk-margin-small">
+                <div class="uk-form-controls">
+                    <label class="uk-form-label uk-text-small uk-text-meta" for="form-horizontal-filter">Deposit amount</label>
+                    <input class="uk-input" type="number" ng-model="search.keyword" placeholder="Amount ...">
+                </div>
+            </div>
+
+            <div class="uk-margin-small">
+                <div class="uk-form-controls">
+                    <label class="uk-form-label uk-text-small uk-text-meta" for="form-horizontal-filter">Cash receiver</label>
+                    <select class="uk-select" ng-model="form.postal_code_id" id="form-stacked-postalcode">
+                        <option disabled>-- select --</option>
+                    </select>
+                </div>
+            </div>
+            <!-- /search form form -->
+            <hr/>
+
+            <div class="uk-margin-small">
+                <div class="uk-inline">
+                    <button type="button" class="uk-button uk-button-primary">Deposit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- This is the modal -->
+<div id="modal-cash-receiver" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body">
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+        <h3 class="uk-modal-title">Cash Receiver</h3>
+        <hr/>
+        <form>
+            <!-- search form form -->
+            <div class="uk-margin-small">
+                <div class="uk-form-controls">
+                    <label class="uk-form-label uk-text-small uk-text-meta" for="form-horizontal-filter">Name</label>
+                    <input class="uk-input" type="text" placeholder="Name ...">
+                </div>
+            </div>
+
+            <div class="uk-margin-small">
+                <div class="uk-form-controls">
+                    <label class="uk-form-label uk-text-small uk-text-meta" for="form-horizontal-filter">ID Number</label>
+                    <input class="uk-input" type="text" placeholder="ID Number ...">
+                </div>
+            </div>
+
+            <div class="uk-margin-small">
+                <div class="uk-form-controls">
+                    <label class="uk-form-label uk-text-small uk-text-meta" for="form-horizontal-filter">Birthdate</label>
+                    <input class="uk-input" type="date" placeholder="Birthdate ...">
+                </div>
+            </div>
+
+            <div class="uk-margin-small">
+                <div class="uk-form-controls">
+                    <label class="uk-form-label uk-text-small uk-text-meta" for="form-horizontal-filter">NPWP</label>
+                    <input class="uk-input" type="text" placeholder="NPWP ...">
+                </div>
+            </div>
+
+            <div class="uk-margin-small">
+                <div class="uk-form-controls">
+                    <label class="uk-form-label uk-text-small uk-text-meta" for="form-horizontal-filter">Email</label>
+                    <input class="uk-input" type="text" placeholder="Email ...">
+                </div>
+            </div>
+
+            <div class="uk-margin-small">
+                <div class="uk-form-controls">
+                    <label class="uk-form-label uk-text-small uk-text-meta" for="form-horizontal-filter">Phone number</label>
+                    <input class="uk-input" type="text" placeholder="Phone number ...">
+                </div>
+            </div>
+
+            <div class="uk-margin">
+                <label class="uk-form-label uk-text-meta uk-text-small" for="form-stacked-postalcode">Postal Code</label>
+                <div class="uk-form-controls">
+                    <select class="uk-select" ng-model="form.postal_code_id" id="form-stacked-postalcode">
+                        <option disabled>-- select postal code --</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="uk-margin-small">
+                <div class="uk-form-controls">
+                    <label class="uk-form-label uk-text-small uk-text-meta" for="form-horizontal-filter">Address</label>
+                    <textarea class="uk-textarea" placeholder="Address"></textarea>
+                </div>
+            </div>
+            <!-- /search form form -->
+            <hr/>
+
+            <div class="uk-margin-small">
+                <div class="uk-inline">
+                    <button type="button" class="uk-button uk-button-primary">Deposit</button>
+                </div>
+            </div>
+        </form>
     </div>
 </div>

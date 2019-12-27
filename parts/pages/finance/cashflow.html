@@ -1,0 +1,121 @@
+<!-- Breadcrumb-->
+<ul class="uk-breadcrumb">
+    <li><a href="#">Home</a></li>
+    <li><span>Mitra</span></li>
+</ul>
+<!-- /Breadcrumb-->
+
+<div class="uk-card uk-card-default uk-card-small uk-card-hover">
+    <div class="uk-card-header">
+        <div class="uk-grid uk-grid-small">
+            <div class="uk-width-auto"><h4>Mitra</h4></div>
+            <div class="uk-width-expand uk-text-right panel-icons">
+                <a href="#" class="uk-icon-link" title="Search & Filter" data-uk-tooltip data-uk-icon="icon: settings" uk-toggle="target: #modal-search"></a>
+            </div>
+        </div>
+    </div>
+    <div class="uk-card-body uk-overflow-auto">
+        <table class="uk-table uk-table-striped uk-text-small">
+            <thead>
+                <tr>
+                    <th>Status</th>
+                    <th>Mitra</th>
+                    <th>Transfer Date</th>
+                    <th>Amount</th>
+                    <th>Cash receiver</th>
+                    <th>Description</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span uk-icon="icon: check"></span></td>
+                    <td><a href="#!/mitra/1" class="uk-text-success">Lorem ipsum - L0001</a></td>
+                    <td><span class="uk-text-success">01, January 2020</span></td>
+                    <td><span class="uk-text-success">Rp 3,000,000</span></td>
+                    <td><span class="uk-text-success">John doe</span></td>
+                    <td><p class="uk-text-meta uk-margin-remove">Lorem ipsum</p></td>
+                    <td>
+                        <a href="" uk-icon="icon: check"></a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="uk-card-footer">
+        <p class="uk-clearfix uk-margin-remove">
+            <ul class="uk-pagination uk-float-left uk-margin-small">
+                <li><a href="#"><span uk-pagination-previous></span></a></li>
+                <li><a href="#">1</a></li>
+                <li class="uk-disabled"><span>...</span></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">6</a></li>
+                <li class="uk-active"><span>7</span></li>
+                <li><a href="#">8</a></li>
+                <li><a href="#">9</a></li>
+                <li><a href="#">10</a></li>
+                <li class="uk-disabled"><span>...</span></li>
+                <li><a href="#">20</a></li>
+                <li><a href="#"><span uk-pagination-next></span></a></li>
+            </ul>            
+        </p>
+    </div>
+</div>
+<!-- This is the modal -->
+<div id="modal-search" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body">
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+        <h3 class="uk-modal-title">Search & Filter</h3>
+        <hr/>
+        <form>
+            <!-- search form form -->
+            <div class="uk-margin-small">
+                <div class="uk-form-controls">
+                    <div class="uk-inline" style="display:block;">
+                        <a class="uk-form-icon uk-form-icon-flip" href="#" uk-icon="icon: search"></a>
+                        <input class="uk-input" type="text" ng-model="search.keyword" placeholder="Search by name, email or phone number ...">
+                    </div>
+                </div>
+            </div>
+            <!-- /search form form -->
+
+            <!-- filter and sort form -->
+            <div class="uk-margin-small">
+                <div class="uk-form-controls">
+                    <div uk-grid>
+                        <!-- filter -->
+                        <div class="uk-width-1-2">
+                            <label class="uk-form-label uk-text-small uk-text-meta" for="form-horizontal-filter">Filter by</label>
+                            <select class="uk-select" id="form-horizontal-filter">
+                                <option>Active only</option>
+                                <option>Inactive only</option>
+                            </select>
+                        </div>
+                        <!-- /filter -->
+
+                        <!-- sort -->
+                        <div class="uk-width-1-2">
+                            <label class="uk-form-label uk-text-small uk-text-meta" for="form-horizontal-sort">Sort</label>
+                            <select class="uk-select" id="form-horizontal-sort">
+                                <option>Newest</option>
+                                <option>Updated</option>
+                                <option>Alphabetically</option>
+                            </select>
+                        </div>
+                        <!-- /sort -->
+                    </div>
+                </div>
+            </div>
+            <!-- /filter and sort form -->
+            <hr/>
+
+            <div class="uk-margin-small">
+                <div class="uk-inline">
+                    <button type="button" class="uk-button uk-button-primary">Search & Filter</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
