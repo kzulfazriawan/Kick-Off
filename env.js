@@ -1,15 +1,19 @@
 // MAIN URL
 var uri = {
     "root": "",
-    "api": "http://localhost:8000/api",
+    //"api": "http://localhost:8000/api",
+    "api": "http://localhost:5000"
 }
 
 // ROUTE LOCATION
 var route = {
     "api": {
-        "login": uri.api + '/authentication/login',
+//        "login": uri.api + '/authentication/login',
+        "login": uri.api + '/auth/login',
         "self": uri.api + '/user/self',
         "user" : uri.api + '/user',
+        "mitra": uri.api + '/mitra',
+        "task": uri.api+ '/task/',
         "profile": uri.api + '/user/profile'
     }
 }

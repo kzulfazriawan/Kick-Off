@@ -1,0 +1,70 @@
+<!-- Breadcrumb-->
+<ul class="uk-breadcrumb">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Tasks</a></li>
+    <li><span>Create</span></li>
+</ul>
+<!-- /Breadcrumb-->
+
+<div class="uk-card uk-card-default uk-card-small uk-card-hover">
+    <form class="uk-form-stacked" ng-submit="uploadTask()">
+        <div class="uk-card-header">
+            <div class="uk-grid uk-grid-small">
+                <div class="uk-width-auto"><h4>Create task</h4></div>
+            </div>
+        </div>
+        <div class="uk-card-body uk-overflow-auto">
+            <div class="uk-margin">
+                <label class="uk-form-label uk-text-meta uk-text-small" for="form-stacked-name">Task Name</label>
+                <div class="uk-form-controls">
+                    <input class="uk-input" id="form-stacked-name" type="text" placeholder="Task name ..." ng-model="form.name">
+                </div>
+                <hr/>
+            </div>
+
+            <div class="uk-margin">
+                <label class="uk-form-label uk-text-meta uk-text-small" for="form-stacked-upload">Upload file</label>
+                <div class="uk-form-controls">
+                    <input ngf-select class="uk-input" id="form-stacked-upload" type="file" placeholder="Upload file ..." ng-model="form.upload_file">
+                </div>
+                <hr/>
+            </div>
+
+            <div class="uk-margin">
+                <label class="uk-form-label uk-text-meta uk-text-small" for="form-stacked-orthophoto-resolution">Orthophoto resolution <i>(cm/px)</i></label>
+                <div class="uk-form-controls">
+                    <input class="uk-range" id="form-stacked-orthophoto-resolution" type="range" min="1" max="10" string-to-number ng-model="form.resolution">
+                </div>
+                <hr/>
+            </div>
+
+            <div class="uk-margin">
+                <label class="uk-form-label uk-text-meta uk-text-small" for="form-stacked-dem-resolution">DEM resolution <i>(cm/px)</i></label>
+                <div class="uk-form-controls">
+                    <input class="uk-range" id="form-stacked-dem-resolution" type="range" min="1" max="10" string-to-number ng-model="form.dem_resolution">
+                </div>
+                <hr/>
+            </div>
+
+            <div class="uk-margin">
+                <label class="uk-form-label uk-text-meta uk-text-small" for="form-stacked-nadir-weight">Urban density</label>
+                <div class="uk-form-controls">
+                    <input class="uk-range" id="form-stacked-nadir-weight" type="range" min="0" max="32" string-to-number ng-model="form.urban_density">
+                </div>
+                <hr/>
+            </div>
+
+            <div class="uk-margin">
+                <label class="uk-form-label uk-text-meta uk-text-small" for="form-stacked-description">Description</label>
+                <div class="uk-form-controls">
+                    <textarea id="form-stacked-description" name="info" class="uk-textarea" ng-model="form.info"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <div class="uk-card-footer uk-clearfix">
+            <button type="button" class="uk-button uk-button-default uk-button-large">Back</button>
+            <button type="submit" class="uk-button uk-button-primary uk-button-large uk-float-right">Save</button>
+        </div>
+    </form>
+</div>

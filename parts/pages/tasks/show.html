@@ -1,0 +1,65 @@
+<!-- Breadcrumb-->
+<ul class="uk-breadcrumb">
+    <li><a href="#">Home</a></li>
+    <li><span>Tasks</span></li>
+ /ul>
+<!-- /Breadcrumb-->
+
+<div class="uk-card uk-card-default uk-card-small uk-card-hover" ng-init="initGetAll()">
+    <div class="uk-card-header">
+        <div class="uk-grid uk-grid-small">
+            <div class="uk-width-auto"><h4>Tasks</h4></div>
+            <div class="uk-width-expand uk-text-right panel-icons">
+                <a href="#" class="uk-icon-link" title="Filter" data-uk-tooltip data-uk-icon="icon: settings" uk-toggle="target: #modal-search"></a>
+            </div>
+        </div>
+    </div>
+    <div class="uk-card-body uk-overflow-auto">
+        <table class="uk-table uk-table-divider">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>UUID</th>
+                    <th>Images</th>
+                    <th>Date</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="uk-card-footer">
+        <p class="uk-clearfix uk-margin-remove">
+            <ul class="uk-pagination uk-float-left uk-margin-small">
+                <li><a href="#"><span uk-pagination-previous></span></a></li>
+                <li><a href="#">1</a></li>
+                <li class="uk-disabled"><span>...</span></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">6</a></li>
+                <li class="uk-active"><span>7</span></li>
+                <li><a href="#">8</a></li>
+                <li><a href="#">9</a></li>
+                <li><a href="#">10</a></li>
+                <li class="uk-disabled"><span>...</span></li>
+                <li><a href="#">20</a></li>
+                <li><a href="#"><span uk-pagination-next></span></a></li>
+            </ul>            
+            <button class="uk-button uk-button-primary uk-float-right">Create a User</button>
+        </p>
+    </div>
+</div>
+
+<!-- This is the modal -->
+<div id="modal-search" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body">
+        <h2 class="uk-modal-title">Headline</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p class="uk-text-right">
+            <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
+            <button class="uk-button uk-button-primary" type="button">Save</button>
+        </p>
+    </div>
+</div>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d940fd1d-1402-430c-b551-867c120e00c7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env.js" beforeDir="false" afterPath="$PROJECT_DIR$/env.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/ng-route.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/ng-route.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parts/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/parts/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parts/pages/mitra/show.html" beforeDir="false" afterPath="$PROJECT_DIR$/parts/pages/mitra/show.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parts/pages/users/show.html" beforeDir="false" afterPath="$PROJECT_DIR$/parts/pages/users/show.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parts/sidebar.html" beforeDir="false" afterPath="$PROJECT_DIR$/parts/sidebar.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1VV8vcU40iCe9nrmkspdwL5vdaQ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Documents/Works/ODM/PyODM" />
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d940fd1d-1402-430c-b551-867c120e00c7" name="Default Changelist" comment="" />
+      <created>1577327133208</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1577327133208</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="468" y="152" key="FileChooserDialogImpl" timestamp="1577327155852">
+      <screen x="0" y="20" width="1360" height="748" />
+    </state>
+    <state x="468" y="152" key="FileChooserDialogImpl/0.20.1360.748@0.20.1360.748" timestamp="1577327155852" />
+  </component>
+</project>

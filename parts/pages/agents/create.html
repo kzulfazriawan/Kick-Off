@@ -1,7 +1,7 @@
 <!-- Breadcrumb-->
 <ul class="uk-breadcrumb">
     <li><a href="#">Home</a></li>
-    <li><a href="#">Users</a></li>
+    <li><a href="#">Agents</a></li>
     <li><span>Create</span></li>
 </ul>
 <!-- /Breadcrumb-->
@@ -10,22 +10,40 @@
     <form class="uk-form-stacked">
         <div class="uk-card-header">
             <div class="uk-grid uk-grid-small">
-                <div class="uk-width-auto"><h4>Create user</h4></div>
+                <div class="uk-width-auto"><h4>Create Agent</h4></div>
             </div>
         </div>
         <div class="uk-card-body uk-overflow-auto">
             <div class="uk-margin">
-                <label class="uk-form-label uk-text-meta uk-text-small" for="form-stacked-name">Name<sup class="uk-text-danger">*</sup></label>
+                <label class="uk-form-label uk-text-meta uk-text-small" for="form-stacked-mitra">Mitra<sup class="uk-text-danger">*</sup></label>
                 <div class="uk-form-controls">
-                    <input class="uk-input" id="form-stacked-name" type="text" placeholder="Name ..." ng-model="form.name">
+                    <select class="uk-select" id="form-stacked-mitra" ng-model="form.mitra_id">
+                        <option disabled>-- select mitra --</option>
+                    </select>
                 </div>
                 <hr/>
             </div>
 
             <div class="uk-margin">
-                <label class="uk-form-label uk-text-meta uk-text-small" for="form-stacked-upload">Picture</label>
+                <label class="uk-form-label uk-text-meta uk-text-small" for="form-stacked-name">Name<sup class="uk-text-danger">*</sup></label>
                 <div class="uk-form-controls">
-                    <input ngf-select class="uk-input" id="form-stacked-upload" type="file" placeholder="Upload file ..." ng-model="form.upload_file">
+                    <input class="uk-input" id="form-stacked-name" type="text" placeholder="Mitra Name ..." ng-model="form.name">
+                </div>
+                <hr/>
+            </div>
+
+            <div class="uk-margin">
+                <label class="uk-form-label uk-text-meta uk-text-small" for="form-stacked-npwp"><i>NPWP</i><sup class="uk-text-danger">*</sup></label>
+                <div class="uk-form-controls">
+                    <input class="uk-input" id="form-stacked-npwp" type="text" placeholder="Npwp ..." ng-model="form.npwp">
+                </div>
+                <hr/>
+            </div>
+
+            <div class="uk-margin">
+                <label class="uk-form-label uk-text-meta uk-text-small" for="form-stacked-nib"><i>NIB</i><sup class="uk-text-danger">*</sup></label>
+                <div class="uk-form-controls">
+                    <input class="uk-input" id="form-stacked-nib" type="text" placeholder="Nib ..." ng-model="form.nib">
                 </div>
                 <hr/>
             </div>
@@ -39,23 +57,7 @@
             </div>
 
             <div class="uk-margin">
-                <label class="uk-form-label uk-text-meta uk-text-small" for="form-stacked-password">Password<sup class="uk-text-danger">*</sup></label>
-                <div class="uk-form-controls">
-                    <input class="uk-input" id="form-stacked-password" type="password" placeholder="Password ..." ng-model="form.password">
-                </div>
-                <hr/>
-            </div>
-
-            <div class="uk-margin">
-                <label class="uk-form-label uk-text-meta uk-text-small" for="form-stacked-password-confirmation">Password confirmation<sup class="uk-text-danger">*</sup></label>
-                <div class="uk-form-controls">
-                    <input class="uk-input" id="form-stacked-password-confirmation" type="text" placeholder="Password confirmation ..." ng-model="form.password_confirmation">
-                </div>
-                <hr/>
-            </div>
-
-            <div class="uk-margin">
-                <label class="uk-form-label uk-text-meta uk-text-small" for="form-stacked-phonenumber">Phone number</label>
+                <label class="uk-form-label uk-text-meta uk-text-small" for="form-stacked-phonenumber">Phone number<sup class="uk-text-danger">*</sup></label>
                 <div class="uk-form-controls">
                     <input class="uk-input" id="form-stacked-phonenumber" type="tel" placeholder="Phone number ..." ng-model="form.phonenumber">
                 </div>
@@ -63,7 +65,7 @@
             </div>
 
             <div class="uk-margin">
-                <label class="uk-form-label uk-text-meta uk-text-small" for="form-stacked-postalcode">Postal Code</label>
+                <label class="uk-form-label uk-text-meta uk-text-small" for="form-stacked-postalcode">Postal Code<sup class="uk-text-danger">*</sup></label>
                 <div class="uk-form-controls">
                     <select class="uk-select" ng-model="form.postal_code_id" id="form-stacked-postalcode">
                         <option disabled>-- select postal code --</option>
@@ -73,16 +75,9 @@
             </div>
 
             <div class="uk-margin">
-                <label class="uk-form-label uk-text-meta uk-text-small" for="form-stacked-address">Address</label>
+                <label class="uk-form-label uk-text-meta uk-text-small" for="form-stacked-address">Address<sup class="uk-text-danger">*</sup></label>
                 <div class="uk-form-controls">
                     <textarea class="uk-textarea" ng-model="form.address" id="form-stacked-address"></textarea>
-                </div>
-            </div>
-
-            <div class="uk-margin">
-                <label class="uk-form-label uk-text-meta uk-text-small" for="form-stacked-about">About</label>
-                <div class="uk-form-controls">
-                    <textarea class="uk-textarea" ng-model="form.about" id="form-stacked-about"></textarea>
                 </div>
             </div>
         </div>
