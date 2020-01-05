@@ -56,7 +56,7 @@ app.config(function($routeProvider) {
         templateUrl : "/parts/pages/tasks/show.html",
         controller: "Tasks"
     })
-    .when("/tasks/create", {
+    .when("/task/create", {
         templateUrl : "/parts/pages/tasks/create.html",
         controller: "Tasks"
     })
