@@ -1,0 +1,327 @@
+body{
+    background-color: #fff;
+}
+
+h1{
+    font-family: GentonaMedium;
+    font-size:24pt;
+}
+
+.flat-left{
+    margin-left:220px;
+}
+
+p.heading-face{
+    font-family: MyriadPro;
+    font-size: 18pt;
+}
+
+button.round-gas{
+    color:#c79855;
+    background-color: #fff;
+    font-family: GentonaMedium;
+    font-size: 12pt;
+
+    -webkit-border-radius: 100px;
+       -moz-border-radius: 100px;
+         -o-border-radius: 100px;
+            border-radius: 100px;
+}
+
+.position-body-custom{
+    max-width: 100%;
+    display: block;
+    position: relative;
+    top: 250px;
+    left: 0;
+    right: 0;
+}
+
+.position-cover-img-custom{
+    max-width: 100%;
+    display: block;
+    position: relative;
+    top: 345px;
+    left: 0;
+    right: 0;
+}
+
+.footer-list{
+    padding:30px 0;
+    max-width: 100%;
+    display: block;
+    color: #a5a5a5;
+    font-family: GentonaMedium;
+    font-size:12pt;
+}
+
+.header-cover{
+    background-image: url(../img/gas/cover.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top left;
+    max-height: 700px;
+    width: 100%;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#navbar-head{
+    height: 100%;
+}
+
+.border-only{
+    background-color: #fff;
+    height: 1px;
+    width: 100%;
+}
+
+.menu-img .mi{
+    display:block;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center center;
+}
+
+.menu-img .mi a{
+    display: block;
+    text-align:center;
+    margin:auto;
+    padding:30px 0;
+    font-family:MyriadPro;
+    font-size:16pt;
+    font-weight:600;
+}
+
+.menu-img .mi-1{
+    background-image: url('../img/gas/a1.jpg');
+}
+
+.menu-img .mi-2{
+    background-image: url('../img/gas/a2.jpg');
+}
+.menu-img .mi-3{
+    background-image: url('../img/gas/a3.jpg');
+}
+.menu-img .mi-4{
+    background-image: url('../img/gas/a4.jpg');
+}
+
+ul.gas-navbar{
+    padding:0 20px 0 0;
+}
+
+ul.gas-navbar li{
+    text-align: left;
+}
+
+ul.gas-navbar li a.text{
+    margin:0;
+    padding:0;
+    padding-right:40px;
+    text-transform: capitalize;
+    font-family: GentonaMedium;
+    font-size: 12pt;
+}
+
+ul.gas-navbar li.uk-active{
+    border-bottom: 2px solid #ffffff;
+}
+
+ul.slider{
+    list-style: none;
+    position: absolute;
+}
+
+ul.slider li{
+    float:left;
+    height:10px;
+    width:75px;
+    margin: 0 10px;
+    opacity: 55%;
+}
+
+ul.slider li:first-child{
+    margin-left: 0;
+}
+
+ul.slider li a{
+    display:block !important;
+    background-color: #ffffff;
+    height:5px;
+    width:75px;
+}
+
+ul.slider li.active{
+    opacity: 100%;
+}
+
+a.border-icon{
+    float:right;
+    margin-top:15px;
+    display:block;
+    width: fit-content;
+    margin:auto;
+    margin-right: 10px;
+    padding: 1px;
+    border: 1px solid #fff;
+    -webkit-border-radius: 100px;
+       -moz-border-radius: 100px;
+         -o-border-radius: 100px;
+            border-radius: 100px;
+}
+
+.cover-page{
+    display:block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top left;
+    height: 100vh;
+    width: 100%;
+}
+
+.menu-img{
+    display:block;
+    width:100%;
+}
+
+.cover-page-1{
+    background-image: url(../img/gas/cover.jpg);
+}
+
+.cover-content{
+    display: block;
+    padding-top:40vh
+}
+
+span.icon-btn{
+    color: #c79855;
+    background-color: #fff;
+    padding: .4em;
+    -webkit-border-radius: 100px;
+       -moz-border-radius: 100px;
+         -o-border-radius: 100px;
+            border-radius: 100px;
+}
+
+ul.thumbnav-custom{
+    padding:0;
+    min-height: 170px;
+    font-size: 18pt;
+}
+
+ul.thumbnav-custom li{
+    padding:0;
+}
+
+ul.thumbnav-custom li a{
+    color:#efefef;
+    display:block;
+    height: 150px;
+    padding-left: 100px;
+    padding-top: 30px;
+}   
+
+ul.thumbnav-custom li a:hover{
+    text-decoration: none;
+}
+
+
+ul.thumbnav-custom li a span{
+
+    display:block;
+    margin:auto;
+    font-family: GentonaMedium;
+}
+
+ul.thumbnav-custom li a.tc-1{
+    background-position:center center;
+    background-size: cover;
+    background-image: url('../img/gas/a1.jpg');
+}
+
+ul.thumbnav-custom li a.tc-2{
+    background-position:center center;
+    background-size: cover;
+    background-image: url('../img/gas/a2.jpg');
+}
+
+ul.thumbnav-custom li a.tc-3{
+    background-position:center center;
+    background-size: cover;
+    background-image: url('../img/gas/a3.jpg');
+}
+
+ul.thumbnav-custom li a.tc-4{
+    background-position:center center;
+    background-size: cover;
+    background-image: url('../img/gas/a4.jpg');
+}
+
+ul.footer-list{
+    list-style: none;
+}
+
+ul.footer-list li a{
+    color: #a5a5a5;
+}
+
+ul.footer-list li a:hover{
+    color: #222;
+    text-decoration: none;
+}
+
+p.footer-title{
+    color:#222;
+    text-transform: uppercase;
+}
+
+ul.footer-list-icon{
+    list-style: none;
+    padding:0;
+}
+
+ul.footer-list-icon li{
+    float: left;
+    margin:5px;
+}
+
+ul.footer-list-icon li:first-child{
+    margin-left:0;
+}
+
+ul.footer-list-icon li a{
+    color: #444;
+}
+
+ul.footer-list-icon li a:hover{
+    color: #222;
+}
+
+.card-services{
+    font-family: GentonaMedium;
+    color:#fff !important;
+    background: url(../img/gas/transparent.png);
+}
+.card-services h3{
+    color:#fff !important;
+}
+
+@font-face {
+    font-family: GentonaBook;
+    src: url(img/gas/GentonaBook.otf);
+}
+@font-face {
+    font-family: GentonaMedium;
+    src: url(../img/gas/GentonaMedium.otf);
+}
+@font-face {
+    font-family: MyriadPro;
+    src: url(../img/gas/MyriadPro-Regular.otf);
+}
+@font-face {
+    font-family: RobotoMedium;
+    src: url(../img/gas/Roboto-Medium.ttf);
+}

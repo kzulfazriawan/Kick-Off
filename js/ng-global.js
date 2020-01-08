@@ -45,8 +45,10 @@ app.controller('Global', ['$scope', '$http', '$window', '$cookies', '$rootScope'
         var getXHR = function(target, auth, respond){
             var header = {"Content-Type": 'application/json; charset=utf-8'};
             if(typeof auth !== 'undefined' && auth != null) {
-                header.Authorization = 'Bearer' + $rootScope.session.token
+                header.Authorization = 'Bearer ' + $rootScope.session.token
             }
+
+            console.log(header);
 
             $http.get(target, {"headers": header}).then(function success(response) {
                 var data = response.data;

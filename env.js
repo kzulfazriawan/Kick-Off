@@ -11,9 +11,11 @@ var route = {
 //        "login": uri.api + '/authentication/login',
         "login": uri.api + '/auth/login',
         "self": uri.api + '/user/self',
-        "user" : uri.api + '/user',
+        "user" : uri.api + '/user/',
         "mitra": uri.api + '/mitra',
         "task": uri.api+ '/task/',
+        "task_generate": uri.api + '/task/generate',
+        "tasks": uri.api+ '/task/all',
         "profile": uri.api + '/user/profile'
     }
 }

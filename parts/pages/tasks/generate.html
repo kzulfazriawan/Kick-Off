@@ -1,0 +1,138 @@
+<!-- Breadcrumb-->
+<ul class="uk-breadcrumb" ng-init="initGetOne('generate')">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Task</a></li>
+    <li><span>{{ data.name }}</span></li>
+</ul>
+<!-- /Breadcrumb-->
+
+<div class="uk-card uk-card-default uk-card-small uk-card-hover">
+    <div class="uk-card-header">
+        <div class="uk-grid uk-grid-small">
+            <div class="uk-width-auto"><h4>Task - {{ data.name }}</h4></div>
+        </div>
+    </div>
+
+    <div class="uk-card-body uk-overflow-auto">
+        <div class="uk-margin uk-clearfix">
+        </div>
+    </div>
+
+    <div class="uk-card-footer uk-clearfix">
+        <button type="button" class="uk-button uk-button-default uk-button-large">Back</button>
+        <button type="button" class="uk-button uk-button-default uk-button-large uk-float-right">
+            <span uk-icon="icon: pencil"></span> Update
+        </button>
+    </div>
+</div>
+
+<!-- This is the modal -->
+<div id="modal-deposit" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body">
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+        <h3 class="uk-modal-title">Deposit</h3>
+        <hr/>
+        <form>
+            <!-- search form form -->
+            <div class="uk-margin-small">
+                <div class="uk-form-controls">
+                    <label class="uk-form-label uk-text-small uk-text-meta" for="form-horizontal-filter">Deposit amount</label>
+                    <input class="uk-input" type="number" ng-model="search.keyword" placeholder="Amount ...">
+                </div>
+            </div>
+            <div class="uk-margin-small">
+                <div class="uk-form-controls">
+                    <label class="uk-form-label uk-text-small uk-text-meta" for="form-horizontal-filter">Cash receiver</label>
+                    <select class="uk-select" ng-model="form.postal_code_id" id="form-stacked-postalcode">
+                        <option disabled>-- select --</option>
+                    </select>
+                </div>
+            </div>
+            <!-- /search form form -->
+            <hr/>
+
+            <div class="uk-margin-small">
+                <div class="uk-inline">
+                    <button type="button" class="uk-button uk-button-primary">Deposit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- This is the modal -->
+<div id="modal-cash-receiver" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body">
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+        <h3 class="uk-modal-title">Cash Receiver</h3>
+        <hr/>
+        <form>
+            <!-- search form form -->
+            <div class="uk-margin-small">
+                <div class="uk-form-controls">
+                    <label class="uk-form-label uk-text-small uk-text-meta" for="form-horizontal-filter">Name</label>
+                    <input class="uk-input" type="text" placeholder="Name ...">
+                </div>
+            </div>
+
+            <div class="uk-margin-small">
+                <div class="uk-form-controls">
+                    <label class="uk-form-label uk-text-small uk-text-meta" for="form-horizontal-filter">ID Number</label>
+                    <input class="uk-input" type="text" placeholder="ID Number ...">
+                </div>
+            </div>
+
+            <div class="uk-margin-small">
+                <div class="uk-form-controls">
+                    <label class="uk-form-label uk-text-small uk-text-meta" for="form-horizontal-filter">Birthdate</label>
+                    <input class="uk-input" type="date" placeholder="Birthdate ...">
+                </div>
+            </div>
+
+            <div class="uk-margin-small">
+                <div class="uk-form-controls">
+                    <label class="uk-form-label uk-text-small uk-text-meta" for="form-horizontal-filter">NPWP</label>
+                    <input class="uk-input" type="text" placeholder="NPWP ...">
+                </div>
+            </div>
+
+            <div class="uk-margin-small">
+                <div class="uk-form-controls">
+                    <label class="uk-form-label uk-text-small uk-text-meta" for="form-horizontal-filter">Email</label>
+                    <input class="uk-input" type="text" placeholder="Email ...">
+                </div>
+            </div>
+
+            <div class="uk-margin-small">
+                <div class="uk-form-controls">
+                    <label class="uk-form-label uk-text-small uk-text-meta" for="form-horizontal-filter">Phone number</label>
+                    <input class="uk-input" type="text" placeholder="Phone number ...">
+                </div>
+            </div>
+
+            <div class="uk-margin">
+                <label class="uk-form-label uk-text-meta uk-text-small" for="form-stacked-postalcode">Postal Code</label>
+                <div class="uk-form-controls">
+                    <select class="uk-select" ng-model="form.postal_code_id" id="form-stacked-postalcode">
+                        <option disabled>-- select postal code --</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="uk-margin-small">
+                <div class="uk-form-controls">
+                    <label class="uk-form-label uk-text-small uk-text-meta" for="form-horizontal-filter">Address</label>
+                    <textarea class="uk-textarea" placeholder="Address"></textarea>
+                </div>
+            </div>
+            <!-- /search form form -->
+            <hr/>
+
+            <div class="uk-margin-small">
+                <div class="uk-inline">
+                    <button type="button" class="uk-button uk-button-primary">Deposit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

@@ -60,5 +60,13 @@ app.config(function($routeProvider) {
         templateUrl : "/parts/pages/tasks/create.html",
         controller: "Tasks"
     })
+    .when("/task/:endpoint", {
+        templateUrl : "/parts/pages/tasks/detail.html",
+        controller: "Tasks"
+    })
+    .when("/task/generate/:endpoint", {
+        templateUrl : "/parts/pages/tasks/generate.html",
+        controller: "Tasks"
+    })
 
 });
